@@ -4,14 +4,23 @@ import java.util.Calendar;
 import java.util.List;
 
 import br.com.caelum.leilao.dominio.Leilao;
+import br.com.caelum.leilao.dominio.IRepositorioDeLeiloes;
 import br.com.caelum.leilao.infra.dao.LeilaoDao;
 
 public class EncerradorDeLeilao {
 
-	private int total = 0;
+	private final IRepositorioDeLeiloes dao;
 
+    public EncerradorDeLeilao(IRepositorioDeLeiloes dao) {
+        this.dao = dao;
+    }
+    
+	private int total = 0;
+	
+	public EncerradorDeLeilao(LeilaoDao dao) {
+		this.dao = dao;
+	}
 	public void encerra() {
-		LeilaoDao dao = new LeilaoDao();
 		List<Leilao> todosLeiloesCorrentes = dao.correntes();
 
 		for (Leilao leilao : todosLeiloesCorrentes) {

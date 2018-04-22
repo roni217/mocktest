@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.caelum.leilao.dominio.Leilao;
+import br.com.caelum.leilao.dominio.IRepositorioDeLeiloes;
 
-public class LeilaoDaoFalso {
+public class LeilaoDaoFalso implements IRepositorioDeLeiloes{
 
 	private static List<Leilao> leiloes = new ArrayList<Leilao>();;
 	
