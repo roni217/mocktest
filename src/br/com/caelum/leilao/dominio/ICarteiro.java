@@ -1,5 +1,5 @@
 package br.com.caelum.leilao.dominio;
 
-public interface IEnviadorDeEmail {
+public interface ICarteiro {
 	void envia(Leilao leilao);
 }
