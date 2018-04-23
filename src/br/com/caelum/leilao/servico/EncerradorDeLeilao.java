@@ -6,7 +6,6 @@ import java.util.List;
 import br.com.caelum.leilao.dominio.ICarteiro;
 import br.com.caelum.leilao.dominio.IRepositorioDeLeiloes;
 import br.com.caelum.leilao.dominio.Leilao;
-import br.com.caelum.leilao.infra.dao.LeilaoDao;
 
 public class EncerradorDeLeilao {
 
